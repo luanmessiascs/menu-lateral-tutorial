@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Menu Lateral - Tutorial 1</title>
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="#">
+                    <span class="bi bi-house-door"></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="bi bi-people"></span>
+                    <span class="title">Usuário</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="bi bi-chat-dots"></span>
+                    <span class="title">Mensagens</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="bi bi-gear"></span>
+                    <span class="title">Configurações</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="bi bi-question-circle"></span>
+                    <span class="title">Ajuda</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="bi bi-lock"></span>
+                    <span class="title">Senha</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <span class="bi bi-box-arrow-right"></span>
+                    <span class="title">Sair</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const list = document.querySelectorAll('.list')
+        function activeLink() {
+            list.forEach(item => item.classList.remove('active'))
+            this.classList.add('active')
+        }
+
+        list.forEach(item => item.addEventListener('click', activeLink))
+    </script>
+</body>
+</html>
